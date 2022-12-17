@@ -1,0 +1,32 @@
+{
+  "name": "telegrampixels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WarutereIan/TelegramPixels.git"
+  },
+  "keywords": [],
+  "author": "Warutere Ian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WarutereIan/TelegramPixels/issues"
+  },
+  "homepage": "https://github.com/WarutereIan/TelegramPixels#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "jimp": "^0.16.2",
+    "pexels": "^1.4.0",
+    "telegraf": "^4.11.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "type":"module"
+}
