@@ -3,7 +3,7 @@ import {v4 as uuidv4} from "uuid"
 import * as dotenv from "dotenv"
 dotenv.config()
 
-import {generateImage} from "./factGenerator.js"
+import {generateImage,deleteImage} from "./factGenerator.js"
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
@@ -18,7 +18,11 @@ bot.command('new_fact',async (ctx)=>{
         ctx.reply("Generating image, just a little longer")
         let imagePath = `./temp/${uuidv4()}.jpg`
         await generateImage(imagePath)
-        await ctx.replyWithPhoto({source: imagePath})
+        await ctx.replyWithPhoto({source: imagePath}).then(res => {
+            console.log(res)
+            if(res){deleteImage(imagePath)}})
+        
+
     }
     catch(error){
         console.log('error', error)

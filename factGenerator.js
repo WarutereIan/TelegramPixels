@@ -78,7 +78,7 @@ async function editImage(image,imagePath,fact){
     }
 }
 
-const deleteImage = () =>{
+const deleteImage = (imagePath) =>{
     fs.unlink(imagePath,(err)=>{
         if(err){
             return
@@ -86,7 +86,5 @@ const deleteImage = () =>{
     console.log('file deleted')
     })
 } 
-
-getRandomImage("lion")
 
 export {generateImage, deleteImage}
